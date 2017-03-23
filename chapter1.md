@@ -27,9 +27,9 @@ TypeScript-aware editors leverage these same definition files to display type in
 
 TypeScript includes a special declaration file called [lib.d.ts](https://github.com/Microsoft/TypeScript/blob/master/lib/lib.d.ts). This file contains the ambient declarations for various common JavaScript constructs present in JavaScript runtimes and the DOM. Such as window, location Object
 
-Based on the`--target`, TypeScript adds \_additional \_ambient declarations like`Promise`if the target is`es6`.
+Based on the`--target`, TypeScript adds additional ambient declarations like`Promise`if the target is`es6`.
 
-Since the QuickStart is targeting es5, you can override the list of declaration files to be included:
+Since the were targeting es5, you can override the list of declaration files to be included:
 
 ```
 "lib":["es2015","dom"]
