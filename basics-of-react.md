@@ -23,11 +23,21 @@ So on a "UML"-type of level this is a quite simple pattern that promises to:
 
 > The MVC design pattern decouples these major components allowing for efficient code reuse and parallel development.
 
+
+
+
+
 This looks quite simple. First, we need to describe our View using HTML for example and how it transforms the model into the DOM. Then, whenever the user acts we update the model and re-render the entire thing. Unfortunately, this is not very straightforward.
+
+
 
 The first problem is that the DOM naturally comes with some state binding capabilities such as user data input so we can not just re-render the entire thing and the second major problem is that rendering DOM elements are **really slow**.
 
 So what do we do, how do we keep the model in sync with our view/DOM?
+
+#### 
+
+#### 
 
 #### Data binding
 
@@ -36,6 +46,8 @@ For the past 4 years, the most common framework feature introduced to solve this
 Data binding is the ability to keep your model and view in sync automatically. Usually that means your JavaScript objects and your DOM.
 
 It achieves that by letting you declare the dependencies between the pieces of data in your app and changes in the state are propagated throughout your application and all depending pieces are "automagically" updated.
+
+####  {#75e8}
 
 #### Knockout {#75e8}
 
