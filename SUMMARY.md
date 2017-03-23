@@ -6,4 +6,5 @@
 * [TypeScript](chapter1.md)
 * [Node](node.md)
 * [Starter project structure](starter-project-structure.md)
+* [Basics of React](basics-of-react.md)
 

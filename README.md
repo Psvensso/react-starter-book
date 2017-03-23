@@ -12,16 +12,12 @@
 
   * Webpack
 
-#### Sample project structure
+#### Starter project structure
 
-* Back-end
-  * Replace with other back-end or proxy
-* Static content and styling
 * App structure
-  * UIComponents
-  * Services
-  * Utils
-  * Domain
+* Back-end
+  * Replace with other backend
+  * Static content and styling
 
 #### Basics of React
 
