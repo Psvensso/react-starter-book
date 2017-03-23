@@ -4,9 +4,7 @@
 
 * TypeScript
 
-* NodeJS
-
-
+* Node
 
 #### Sample project structure
 
