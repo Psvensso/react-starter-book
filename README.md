@@ -6,13 +6,7 @@
 
 * NodeJS
 
-  * NPM
-    * package.json
-  * Yarn
-    * yarn.lock
-  * Express
 
-* Webpack
 
 #### Sample project structure
 
