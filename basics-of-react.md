@@ -53,24 +53,8 @@ It achieves that by letting you declare the dependencies between the pieces of d
 
 Knockout argues for the [**MVVM**\(Model-View-ViewModel\)](http://knockoutjs.com/documentation/observables.html) approach and helps you implement the “View” parts:
 
-```
-// View
-<p>First name: <input data-bind=”value: firstName” /></p> 
-<p>Last name: <input data-bind=”value: lastName” /></p> 
-<h2>Hello, <span data-bind=”text: fullName”> </span>!</h2>
+[](codepen://Pesven/bqKELq?height=600&theme=0)
 
-// ViewModel
-var ViewModel = function(first, last) { 
-  this.firstName = ko.observable(first);
-  this.lastName = ko.observable(last);
-
-  this.fullName = ko.pureComputed(function() {
-    return this.firstName() + " " + this.lastName();
-  }, this);
-};
-```
-
-### 
 
 
 
