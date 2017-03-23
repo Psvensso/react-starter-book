@@ -23,9 +23,9 @@ Let's look at the MVC/MV\* pattern.
 
 In an interactive application the hard part is to manage state. The well proven and long lived MVC trickery works as follows.
 
-```
-                            ![](https://upload.wikimedia.org/wikipedia/commons/9/9d/MVC-basic.svg)
-```
+![](https://upload.wikimedia.org/wikipedia/commons/9/9d/MVC-basic.svg)
+
+
 
 MVC proposes that the model is the single source of truth, all state lives in the model. Views are derived from the model and must be kept in sync, when the model updates so must the view. State changes are done via the controller that updates the view.
 
@@ -39,10 +39,6 @@ The first problem is that the DOM naturally comes with some state binding capabi
 
 So what do we do, how do we keep the model in sync with our view/DOM?
 
-
-
-
-
 #### Data binding
 
 For the past 4 years, the most common framework feature introduced to solve this problem was data binding.
@@ -50,8 +46,6 @@ For the past 4 years, the most common framework feature introduced to solve this
 Data binding is the ability to keep your model and view in sync automatically. Usually that means your JavaScript objects and your DOM.
 
 It achieves that by letting you declare the dependencies between the pieces of data in your app and changes in the state are propagated throughout your application and all depending pieces are "automagically" updated.
-
-
 
 #### Knockout {#75e8}
 
@@ -73,10 +67,6 @@ var ViewModel = function(first, last) {
   }, this);
 };
 ```
-
-
-
-
 
 ### 
 
