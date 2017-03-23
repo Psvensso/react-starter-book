@@ -1,14 +1,8 @@
-# ReactJS
+# Table of content
 
 #### Build tools and prerequisites
 
 * TypeScript
-
-  * Motivation and history
-
-  * Syntax and ES next
-
-  * Browser support, targets, polyfills
 
 * NodeJS
 
@@ -62,7 +56,7 @@
 * HOC
 * React router \(3rd party lib\)
 
-#### Redux
+#### 
 
 #### 
 
