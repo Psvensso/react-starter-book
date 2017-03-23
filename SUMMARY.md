@@ -5,4 +5,5 @@
 * [Table of content 2/2](table-of-content-22.md)
 * [TypeScript](chapter1.md)
 * [Node](node.md)
+* [Starter project structure](starter-project-structure.md)
 

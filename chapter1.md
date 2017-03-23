@@ -29,28 +29,28 @@ TypeScript includes a special declaration file called [lib.d.ts](https://github.
 
 Based on the`--target`, TypeScript adds \_additional \_ambient declarations like`Promise`if the target is`es6`.
 
-Since the QuickStart is targeting`es5`, you can override the list of declaration files to be included:
+Since the QuickStart is targeting es5, you can override the list of declaration files to be included:
 
 ```
 "lib":["es2015","dom"]
 ```
 
-Thanks to that, you have all the`es6`typings even when targeting`es5`.
+Thanks to that, you have all the es6 typings even when targeting es5.
 
 ### Installable typings files {#installable-typings-files}
 
-TypeScript has several strategies of finding you .d.ts definition files. On of the strategies is looking in the same folder as the module was imported from. However many libraries JEst, React Webpack and others do \_not \_include`d.ts`files in their npm packages. Fortunately, either their authors or community contributors have created separate`d.ts`files for these libraries and published them in well-known locations.
+TypeScript has several strategies of finding you .d.ts definition files, one of the strategies is looking in the same folder as the module was imported from. However many libraries Jest, React Webpack and others do not include d.ts files in their npm packages. Fortunately, either their authors or community contributors have created separate d.ts files for these libraries and published them in well-known locations.
 
-You can install these typings via`npm`using the[`@types/*`scoped package](http://www.typescriptlang.org/docs/handbook/declaration-files/consumption.html) and Typescript, starting at 2.0, automatically recognizes them. What @types are installed in the [starter project](https://github.com/Psvensso/react-starter)?
+You can install these typings via `npm` \(more on what npm is later\) using the[`@types/*`scoped package](http://www.typescriptlang.org/docs/handbook/declaration-files/consumption.html) and Typescript, starting at 2.0, automatically recognizes them.
+
+What `@types` are installed in the [starter project](https://github.com/Psvensso/react-starter)?
 
 For instance, to install typings for react you could do  
 `npm install @types/react --save`
 
 Be sure to verify that the @types file is on the same version as the target library file.
 
-  
-For more resources on TypeScript go to their [GitHub Wiki](https://github.com/Microsoft/TypeScript/wiki)  
+For more resources on TypeScript go to their [GitHub Wiki](https://github.com/Microsoft/TypeScript/wiki)
 
-
-The TSC \(type-script-compiler\) runs in Node JS so there is where we head of in the next chapter.
+The TSC \(type-script-compiler\) runs in Node so there is where we head of to in the next chapter.
 
