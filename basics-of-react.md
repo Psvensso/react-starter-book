@@ -1,11 +1,3 @@
----
-plugins:
-  - theme-bandwidth
-pluginsConfig:
-  theme-api:
-    theme: dark
----
-
 # What is React
 
 React is a [open-source javascript](https://github.com/facebook/react) library developed and maintained by Facebook. With React you create UI views and depending on who´s rendering you output the view tree into your device of choice, this can be the DOM if you are using the `react-dom` package or a mobile phone if using the `react-native` package. That was a cryptic explanation but so is React in some ways. Lets try to clean the picture by first declaring what it's not.
@@ -24,8 +16,6 @@ Let's look at the MVC/MV\* pattern.
 In an interactive application the hard part is to manage state. The well proven and long lived MVC trickery works as follows.
 
 ![](https://upload.wikimedia.org/wikipedia/commons/9/9d/MVC-basic.svg)
-
-
 
 MVC proposes that the model is the single source of truth, all state lives in the model. Views are derived from the model and must be kept in sync, when the model updates so must the view. State changes are done via the controller that updates the view.
 
