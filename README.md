@@ -2,9 +2,15 @@
 
 #### Build tools and prerequisites
 
-* [ ] TypeScript
+* TypeScript
 
-* [ ] Node - Webpack - Express
+* Node
+
+  * NPM
+
+  * Express
+
+  * Webpack
 
 #### Sample project structure
 
