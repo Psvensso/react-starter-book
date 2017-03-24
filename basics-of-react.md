@@ -82,6 +82,5 @@ value.bind="likesTacos"
 
 --Pete Hunt, former React core member
 
-React don't use interpolated string templates but instead handles it all in the component.  
 In React the viewModel and the view are the same thing and we merge the concepts.
 

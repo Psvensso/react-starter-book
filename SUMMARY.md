@@ -6,8 +6,9 @@
 * [TypeScript](chapter1.md)
 * [Node](node.md)
 * [Starter project structure](starter-project-structure.md)
+* [MV\*](basics-of-react.md)
 * [React library intro](react-basics.md)
-* [Compare with older libs](basics-of-react.md)
 * [React Components](react-components.md)
+* [Reconciliation](reconciliation.md)
 * Immutability
 
