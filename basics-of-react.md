@@ -1,19 +1,12 @@
-# What is React
+### Compare with other libraries
 
-React is a [open-source javascript](https://github.com/facebook/react) library developed and maintained by Facebook. With React you create UI views and depending on who´s rendering you output the view tree into your device of choice, this can be the DOM if you are using the `react-dom` package or a mobile phone if using the `react-native` package. That was a cryptic explanation but so is React in some ways. Lets try to clean the picture by first declaring what it's not.
+Before we dig into React lets first try to identify some common problems that older frameworks had and how they solved them and then we look at how React handles the problems.
 
-* ### React is NOT a component library
-* ### React does NOT contain any service injection or other bootstrapping of files
-* ### React does NOT contain any router
-* ### React does NOT have a template system
-* ### React does NOT implement the MV\*\* pattern
+Most older javascript frameworks implements some sort of MV\* pattern, so time for a small re-cap.
 
-With that in mind let's first look what we are trying to solve by defining some paradigms.  
-Let's look at the MVC/MV\* pattern.
+### Re-cap MV\*
 
-### Recap MV\*
-
-In an interactive application the hard part is to manage state. The well proven and long lived MVC trickery works as follows.
+In an interactive application the hard part is to manage state. The well proven and long lived MVC is illustrated as follows.
 
 ![](https://upload.wikimedia.org/wikipedia/commons/9/9d/MVC-basic.svg)
 
@@ -23,11 +16,15 @@ So on a "UML"-type of level this is a quite simple pattern that promises to:
 
 > The MVC design pattern decouples these major components allowing for efficient code reuse and parallel development.
 
-This looks quite simple. First, we need to describe our View using HTML for example and how it transforms the model into the DOM. Then, whenever the user acts we update the model and re-render the entire thing. Unfortunately, this is not very straightforward.
+This looks quite simple.  
+First, we need to describe our View using HTML or some sort of template and how it transforms the model into the DOM.  
+Then, whenever the user acts we update the model and re-render the view. Unfortunately, this is not very straightforward.
 
-The first problem is that the DOM naturally comes with some state binding capabilities such as user data input so we can not just re-render the entire thing and the second major problem is that rendering DOM elements are **really slow**.
+The first problem is that the DOM naturally comes with some state binding capabilities such as user data input so we can not just re-render the entire thing or we might loose some of that data. The second major problem is that rendering DOM elements are **really slow**.
 
 So what do we do, how do we keep the model in sync with our view/DOM?
+
+#### 
 
 #### Data binding
 
@@ -42,20 +39,49 @@ It achieves that by letting you declare the dependencies between the pieces of d
 Knockout argues for the [**MVVM**\(Model-View-ViewModel\)](http://knockoutjs.com/documentation/observables.html) approach.  
 But what about the model being the single source of truth?  
 Where should this ViewModel get its state from?  
-How does it does it keep in sync with the model?  
-Here is a short example and then we move on.
+How does it does it keep in sync with the model?
 
 [Fiddle knockout example](https://jsfiddle.net/Swensson/fgrk1ps3/2/)
 
-#### Angular \(1\)
+#### Angular \(1.5\)
 
-Good old angular tries to keep the model \(scope\) and view in sync using their two way databinding strategy.  
+Good old angular tries to keep the model and view in sync using their two way databinding strategy.  
 This image is from the Angular documentation.
 
 ![](/assets/Two_Way_Data_Binding.png)
 
-But is the model really a model here, who owns the state?  
+But is the model really a model here, who owns the state once it morphs and changes over time?  
 Perhaps it's more of a viewmodel if the actual model lives else where or a controller behaving like a model?
 
 [Angular example](https://jsfiddle.net/Swensson/h9zuefbc/1/#fontColor=00FF00&type=frame&height=300)
+
+Confused yet?
+
+Two way databinding is not rocket science in small application but reasoning around code when "everything can change everything" -- e.g. the view can update the model and the model can update the view becomes harder as the application scales. This triggers that that changes this that updates that, who owns the data? What's the real state?
+
+#### View and templates
+
+So in these examples what is the real difference between your view \(template\) and your viewmodel \(controller etc.\), they both can transform the way they display the data and they both can updates the data.
+
+The view \(DOM nodes\) is often written in a template language like handlebars or html,  
+advocates of the "template" paradigm can be fierce defenders of this old saying "don´t mix logic with code". But are the templates not code?
+
+```
+{{# each}} 
+ng-repeat
+databind=”foreach”
+value.bind="likesTacos"
+```
+
+```
+<div *ngFor="let hero of heroes">{{hero.name}}</div>
+<input #heroInput> {{heroInput.value}}
+```
+
+> Templates separate technologies, not concerns
+
+--Pete Hunt, former React core member
+
+React don't use interpolated string templates but instead handles it all in the component.  
+In React the viewModel and the view are the same thing and we merge the concepts.
 

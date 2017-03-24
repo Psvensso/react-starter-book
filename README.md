@@ -19,7 +19,7 @@
   * Replace with other backend
   * Static content and styling
 
-#### Basics of React
+#### Compare to other frameworks
 
 * What is React - higher level
 * React component basics
