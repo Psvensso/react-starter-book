@@ -4,13 +4,7 @@
 _Big chunks of this page is taken from the React team´s _[_excellent blog_](https://facebook.github.io/react/blog/2015/12/18/react-components-elements-and-instances.html)_.  
 Go and check it out when you have a spare moment._
 
-
-
 The difference between **components, their instances, and elements **confuses many React beginners. Why are there three different terms to refer to something that is painted on screen? Let's break it down.
-
-
-
-
 
 In React \(when targeting the web\) a element is a plain object describing a component instance or DOM node and its desired properties.
 
@@ -26,9 +20,10 @@ An element is not an actual instance. Rather, it is a way to tell React what you
 
 #### The Button {#thebutton}
 
-When an element’s`type`is a string, it represents a DOM \(or a native view component when developing with react native\) node with that tag name, and`props`correspond to its attributes. This is what React will render. For example:
+When an element’s`type`is a string, it represents a DOM node  \(or a native view component when developing with react native\) with that tag name, and`props`correspond to its attributes. This is what React will render. For example:
 
 ```
+//An "element"
 {
   type: 'button',
   props: {
@@ -43,6 +38,8 @@ When an element’s`type`is a string, it represents a DOM \(or a native view com
 }
 ```
 
+
+
 This element is just a way to represent the following HTML as a plain object:
 
 ```
@@ -53,9 +50,22 @@ This element is just a way to represent the following HTML as a plain object:
 </button>
 ```
 
+
+
 Note how elements can be nested. By convention, when we want to create an **element tree**, we specify one or more child elements as the`children`prop of their containing element.
 
-What’s important is that both child and parent elements are _just descriptions and not the actual instances_.
+
+
+What’s important is that both child and parent elements are _just descriptions and not the actual instances_.  
+
+
+--An element is not attached to the DOM in any way.
+
+
+
+
+
+
 
 ### Component Elements
 
