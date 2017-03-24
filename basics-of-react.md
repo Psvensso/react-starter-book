@@ -1,6 +1,6 @@
 # What is React
 
-React is a [open-source javascript](https://github.com/facebook/react) library developed and maintained by Facebook. With React you create UI views and depending on who´s rendering you output the view tree into your device of choice, this can be the DOM if you are using the `react-dom` package or a mobile phone if using the `react-native` package. That was a cryptic explanation but so is React in some ways. Lets try to clean the picture by first declaring what it's not.
+React is a [open-source javascript](https://github.com/facebook/react) library developed and maintained by Facebook. With React you create UI views and depending on who´s rendering you output the view tree into your device of choice, this can be the DOM if you are using the `react-dom` package or a mobile phone if using the `react-native` package. That was a cryptic explanation but so is React in some ways. Lets try to clean the picture by first declaring what it's not. 
 
 * ### React is NOT a component library
 * ### React does NOT contain any service injection or other bootstrapping of files
