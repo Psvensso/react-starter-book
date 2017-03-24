@@ -52,9 +52,7 @@ Here is a short example and then we move on.
 Good old angular tries to keep the model \(scope\) and view in sync using their two way databinding strategy.  
 This image is from the Angular documentation.
 
-                                                                ![](/assets/Two_Way_Data_Binding.png)
-
-
+![](/assets/Two_Way_Data_Binding.png)
 
 But is the model really a model here, who owns the state?  
 Perhaps it's more of a viewmodel if the actual model lives else where or a controller behaving like a model?
