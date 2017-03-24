@@ -9,7 +9,7 @@ React is a [open-source javascript](https://github.com/facebook/react) library d
 * ### React does NOT implement the MV\*\* pattern
 
 With that in mind let's first look what we are trying to solve by defining some paradigms.  
-Let's look at the MVC/MV\* pattern. 
+Let's look at the MVC/MV\* pattern.
 
 ### Recap MV\*
 
@@ -39,8 +39,10 @@ It achieves that by letting you declare the dependencies between the pieces of d
 
 #### Knockout
 
-Knockout argues for the [**MVVM**\(Model-View-ViewModel\)](http://knockoutjs.com/documentation/observables.html) approach and helps you implement the “View” parts  
-[codepen](http://codepen.io/Pesven/pen/bqKELq)  
-  
+Knockout argues for the [**MVVM**\(Model-View-ViewModel\)](http://knockoutjs.com/documentation/observables.html) approach and helps you implement the “View” parts
+
+\[source code\]\(https://jsfiddle.net/4o4z6fqn/9/\)  
+[codepen](http://codepen.io/Pesven/pen/bqKELq)
+
 [end codepen](http://codepen.io/Pesven/pen/bqKELq)
 
