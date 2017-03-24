@@ -1,8 +1,15 @@
 # React Components, Elements, and Instances
 
+---
+
 **Note!**  
 _Big chunks of this page is taken from the React team´s _[_excellent blog_](https://facebook.github.io/react/blog/2015/12/18/react-components-elements-and-instances.html)_.  
 Go and check it out when you have a spare moment._
+
+_Some of this code is pseudo code and wont actually run or compile with Typescript,  
+read the footnotes before testing out any code examples._
+
+---
 
 The difference between **components, their instances, and elements **confuses many React beginners. Why are there three different terms to refer to something that is painted on screen? Let's break it down.
 
@@ -223,18 +230,6 @@ A functional component is less powerful but is simpler, and acts like a class co
 
 **Mindset**: A react component is a idempotent function that returns a element or another component.
 
-
-
-
-
-
-
-
-
-
-
-
-
 ### Top-Down Reconciliation
 
 When you call:
@@ -251,4 +246,40 @@ ReactDOM.render({
 ```
 
 React will ask the Form component what element tree it returns, given those props. It will gradually “refine” its understanding of your component tree in terms of simpler primitives:
+
+```
+// React: You told me this...
+{
+  type: Form,
+  props: {
+    isSubmitted: false,
+    buttonText: 'OK!'
+  }
+}
+
+// React: ...And Form told me this...
+{
+  type: Button,
+  props: {
+    children: 'OK!',
+    color: 'blue'
+  }
+}
+
+// React: ...and Button told me this! I guess I'm done.
+{
+  type: 'button',
+  props: {
+    className: 'button button-blue',
+    children: {
+      type: 'b',
+      props: {
+        children: 'OK!'
+      }
+    }
+  }
+}
+```
+
+
 
