@@ -4,7 +4,8 @@
   "description": "* TypeScript",
   "main": "index.js",
   "dependencies": {
-    "gitbook-plugin-codepen": "^0.1.2"
+    "gitbook-plugin-codepen": "^0.1.2",
+    "gitbook-plugin-jsfiddle": "^1.0.0"
   },
   "devDependencies": {},
   "scripts": {
