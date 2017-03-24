@@ -29,8 +29,6 @@ The first problem is that the DOM naturally comes with some state binding capabi
 
 So what do we do, how do we keep the model in sync with our view/DOM?
 
-#### 
-
 #### Data binding
 
 For the past 4 years, the most common framework feature introduced to solve this problem was data binding.
