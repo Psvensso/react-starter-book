@@ -57,5 +57,5 @@ This image is from the Angular documentation.
 But is the model really a model here, who owns the state?  
 Perhaps it's more of a viewmodel if the actual model lives else where or a controller behaving like a model?
 
-[Angular example](https://jsfiddle.net/Swensson/h9zuefbc/1/)
+[Angular example](https://jsfiddle.net/Swensson/h9zuefbc/1/embedded/embedded/result,css,html/height=300)
 
