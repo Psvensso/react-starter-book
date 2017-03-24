@@ -2,8 +2,8 @@
     "plugins": ["codepen", "jsfiddle"],
     "pluginsConfig": {
           "jsfiddle":{
-            "type":"script",
-            "tabs":["result","js","css", "html"],
+            "type":"frame",
+            "tabs":["js","result","css", "html"],
             "height": "350"
           }
     }
