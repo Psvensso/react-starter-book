@@ -130,8 +130,6 @@ When it sees this element:
 }
 ```
 
-
-
 React will ask Button what it renders to. The Button will return this **element**:
 
 ```
@@ -224,6 +222,18 @@ A functional component is less powerful but is simpler, and acts like a class co
 **However, whether functions or classes, fundamentally they are all components to React. They take the props as their input, and return the elements as their output.**
 
 **Mindset**: A react component is a idempotent function that returns a element or another component.
+
+
+
+
+
+
+
+
+
+
+
+
 
 ### Top-Down Reconciliation
 
