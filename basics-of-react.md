@@ -41,5 +41,5 @@ It achieves that by letting you declare the dependencies between the pieces of d
 
 Knockout argues for the [**MVVM**\(Model-View-ViewModel\)](http://knockoutjs.com/documentation/observables.html) approach and helps you implement the “View” parts
 
-[Fiddle kncockout example](https://jsfiddle.net/fgrk1ps3/1/#height=500)
+[Fiddle knockout example](https://jsfiddle.net/fgrk1ps3/1/#height=500&type=frame)
 
