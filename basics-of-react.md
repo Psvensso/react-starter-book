@@ -39,39 +39,25 @@ It achieves that by letting you declare the dependencies between the pieces of d
 
 #### Knockout
 
-Knockout argues for the [**MVVM**\(Model-View-ViewModel\)](http://knockoutjs.com/documentation/observables.html) approach.   
-But what about the model being the single source of truth?   
+Knockout argues for the [**MVVM**\(Model-View-ViewModel\)](http://knockoutjs.com/documentation/observables.html) approach.  
+But what about the model being the single source of truth?  
 Where should this ViewModel get its state from?  
 How does it does it keep in sync with the model?  
 Here is a short example and then we move on.
 
-[Fiddle knockout example](https://jsfiddle.net/fgrk1ps3/1/#height=500&type=frame)
-
-
-
-
-
-
-
-
-
-
+[Fiddle knockout example](https://jsfiddle.net/Swensson/fgrk1ps3/2/)
 
 #### Angular \(1\)
 
 Good old angular tries to keep the model \(scope\) and view in sync using their two way databinding strategy.  
-This image is from the Angular documentation. 
+This image is from the Angular documentation.
 
-                                                   ![](https://docs.angularjs.org/img/Two_Way_Data_Binding.png)
+```
+                                               ![](https://docs.angularjs.org/img/Two_Way_Data_Binding.png)
+```
 
-But is the model really a model here, who owns the state?   
-Perhaps it's more of a viewmodel if the actual model lives else where or a controller behaving like a model?  
-  
-[https://jsfiddle.net/Swensson/h9zuefbc/](https://jsfiddle.net/Swensson/h9zuefbc/)  
-  
+But is the model really a model here, who owns the state?  
+Perhaps it's more of a viewmodel if the actual model lives else where or a controller behaving like a model?
 
-
-
-
-
+[https://jsfiddle.net/Swensson/h9zuefbc/](https://jsfiddle.net/Swensson/h9zuefbc/)
 
