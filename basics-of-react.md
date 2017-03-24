@@ -1,6 +1,6 @@
 # What is React
 
-React is a [open-source javascript](https://github.com/facebook/react) library developed and maintained by Facebook. With React you create UI views and depending on who´s rendering you output the view tree into your device of choice, this can be the DOM if you are using the `react-dom` package or a mobile phone if using the `react-native` package. That was a cryptic explanation but so is React in some ways. Lets try to clean the picture by first declaring what it's not. 
+React is a [open-source javascript](https://github.com/facebook/react) library developed and maintained by Facebook. With React you create UI views and depending on who´s rendering you output the view tree into your device of choice, this can be the DOM if you are using the `react-dom` package or a mobile phone if using the `react-native` package. That was a cryptic explanation but so is React in some ways. Lets try to clean the picture by first declaring what it's not.
 
 * ### React is NOT a component library
 * ### React does NOT contain any service injection or other bootstrapping of files
@@ -57,5 +57,5 @@ This image is from the Angular documentation.
 But is the model really a model here, who owns the state?  
 Perhaps it's more of a viewmodel if the actual model lives else where or a controller behaving like a model?
 
-[Angular example](https://jsfiddle.net/Swensson/h9zuefbc/1/embedded/embedded/result,css,html/height=300)
+[Angular example](https://jsfiddle.net/Swensson/h9zuefbc/1/#fontColor=00FF00&type=frame&height=300)
 
