@@ -283,3 +283,82 @@ React will ask the Form component what element tree it returns, given those prop
 
 
 
+This is a part of the process that React calls reconciliation which starts when you call ReactDOM.render\(\) or setState\(\). By the end of the reconciliation, React knows the result DOM tree, and a renderer like react-dom or react-native applies the minimal set of changes necessary to update the DOM nodes \(or the platform-specific views in case of React Native\).
+
+
+
+This gradual refining process is also the reason React apps are easy to optimize. If some parts of your component tree become too large for React to visit efficiently, you can tell it to skip this “refining” and diffing certain parts of the tree if the relevant props have not changed. It is very fast to calculate whether the props have changed if they are immutable, so React and immutability work great together, and can provide great optimizations with the minimal effort.
+
+
+
+React takes care of creating an instance for every class component, so you can write components in an object-oriented way with methods and local state, but other than that, instances are not very important in the React’s programming model and are managed by React itself.
+
+
+
+# Summary
+
+An element is a plain object describing what you want to appear on the screen in terms of the DOM nodes or other components. Elements can contain other elements in their props. Creating a React element is cheap. Once an element is created, it is never mutated.
+
+
+
+A component can be declared in several different ways. It can be a class with a render\(\) method. Alternatively, in simple cases, it can be defined as a function. In either case, it takes props as an input, and returns an element tree as the output.
+
+
+
+When a component receives some props as an input, it is because a particular parent component returned an element with its type and these props. This is why people say that the props flows one way in React: from parents to children.
+
+
+
+An instance is what you refer to as this in the component class you write. It is useful for storing local state and reacting to the lifecycle events.
+
+
+
+Functional components don’t have instances at all. Class components have instances, but you never need to create a component instance directly—React takes care of this.
+
+
+
+**Finally, to create elements, use React.createElement\(\), JSX, or an element factory helper. Don’t write elements as plain objects in the real code—just know that they are plain objects under the hood.**
+
+---
+
+Footnote:   
+  
+All React elements require an additional
+
+`$$typeof: Symbol.for('react.element')`
+
+field declared on the object for [security reasons](https://github.com/facebook/react/pull/4832).   
+It is omitted in the examples above. The examples above uses inline objects for elements to give you an idea of what’s happening underneath but the code won’t run as is unless you either add
+
+`$$typeof`
+
+to the elements, or change the code to use
+
+`React.createElement()`
+
+or JSX. 
+
+  
+Also the TypeScript interface does not include the `$$typeof` property.  
+   
+Runnable example: 
+
+```js
+import * as React from "react";
+import { render } from "react-dom";
+const el = React.createElement("", );
+render({
+    "$$typeof": Symbol.for('react.element'),
+    key: null,
+    type: 'div',
+    props: {
+        className:"main container-fluid",
+        children: "Hello world!"
+    }
+} as any,
+    document.getElementById("app")
+);
+```
+
+
+
