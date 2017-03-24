@@ -8,8 +8,6 @@ The difference between **components, their instances, and elements **confuses ma
 
 In React \(when targeting the web\) a element is a plain object describing a component instance or DOM node and its desired properties.
 
-
-
 An element is not an actual instance. Rather, it is a way to tell React what you want to see on the screen. You can’t call any methods on the element. It’s just an immutable description object with two fields: type: \(string \| ReactClass\) and props: Object.
 
 ####  {#thebutton}
@@ -38,8 +36,6 @@ When an element’s`type`is a string, it represents a DOM node  \(or a native vi
 }
 ```
 
-
-
 This element is just a way to represent the following HTML as a plain object:
 
 ```
@@ -50,22 +46,11 @@ This element is just a way to represent the following HTML as a plain object:
 </button>
 ```
 
-
-
 Note how elements can be nested. By convention, when we want to create an **element tree**, we specify one or more child elements as the`children`prop of their containing element.
 
-
-
-What’s important is that both child and parent elements are _just descriptions and not the actual instances_.  
-
+What’s important is that both child and parent elements are _just descriptions and not the actual instances_.
 
 --An element is not attached to the DOM in any way.
-
-
-
-
-
-
 
 ### Component Elements
 
@@ -123,6 +108,12 @@ Or, if you prefer JSX:
 )
 ```
 
+### 
+
+### 
+
+### 
+
 ### Components Encapsulate Element Trees
 
 When React sees an element with a function or class type, it knows to ask that component what element it renders to, given the corresponding props.
@@ -138,6 +129,8 @@ When it sees this element:
   }
 }
 ```
+
+
 
 React will ask Button what it renders to. The Button will return this **element**:
 
@@ -159,6 +152,12 @@ React will ask Button what it renders to. The Button will return this **element*
 React will repeat this process until it knows the underlying DOM tag elements for every component on the page.
 
 **The returned element tree can contain both elements describing DOM nodes, and elements describing other components. This lets you compose independent parts of UI without relying on their internal DOM structure.**
+
+### 
+
+### 
+
+### 
 
 ### Components Can Be Classes or Functions
 
@@ -232,6 +231,7 @@ When you call:
 
 ```
 ReactDOM.render({
+  key: 0,
   type: Form,
   props: {
     isSubmitted: false,
