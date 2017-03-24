@@ -27,7 +27,7 @@ This looks quite simple. First, we need to describe our View using HTML for exam
 
 The first problem is that the DOM naturally comes with some state binding capabilities such as user data input so we can not just re-render the entire thing and the second major problem is that rendering DOM elements are **really slow**.
 
-So what do we do, how do we keep the model in sync with our view/DOM?
+So what do we do, how do we keep the model in sync with our view/DOM? 
 
 #### Data binding
 
