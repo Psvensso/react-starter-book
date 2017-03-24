@@ -9,7 +9,7 @@ React is a [open-source javascript](https://github.com/facebook/react) library d
 * ### React does NOT implement the MV\*\* pattern
 
 With that in mind let's first look what we are trying to solve by defining some paradigms.  
-Let's look at the MVC/MV\* pattern.
+Let's look at the MVC/MV\* pattern. 
 
 ### Recap MV\*
 
@@ -37,15 +37,10 @@ Data binding is the ability to keep your model and view in sync automatically. U
 
 It achieves that by letting you declare the dependencies between the pieces of data in your app and changes in the state are propagated throughout your application and all depending pieces are "automagically" updated.
 
-
-
 #### Knockout
 
-Knockout argues for the [**MVVM**\(Model-View-ViewModel\)](http://knockoutjs.com/documentation/observables.html) approach and helps you implement the “View” parts
-[codepen](http://codepen.io/Pesven/pen/bqKELq)
-[](codepen://Pesven/bqKELq?height=250&theme=0)
+Knockout argues for the [**MVVM**\(Model-View-ViewModel\)](http://knockoutjs.com/documentation/observables.html) approach and helps you implement the “View” parts  
+[codepen](http://codepen.io/Pesven/pen/bqKELq)  
+  
 [end codepen](http://codepen.io/Pesven/pen/bqKELq)
-
-
-
 
