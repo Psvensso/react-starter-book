@@ -41,7 +41,7 @@ It achieves that by letting you declare the dependencies between the pieces of d
 
 Knockout argues for the [**MVVM**\(Model-View-ViewModel\)](http://knockoutjs.com/documentation/observables.html) approach and helps you implement the “View” parts
 
-\[source code\]\(https://jsfiddle.net/4o4z6fqn/9/\)  
+[https://jsfiddle.net/4o4z6fqn/9/](https://jsfiddle.net/4o4z6fqn/9/)  
 [codepen](http://codepen.io/Pesven/pen/bqKELq)
 
 [end codepen](http://codepen.io/Pesven/pen/bqKELq)
