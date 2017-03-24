@@ -1,7 +1,7 @@
 # React Components, Elements, and Instances
 
-**Note!**   
-_Big chunks of this page is taken from the React team´s _[_excellent blog_](https://facebook.github.io/react/blog/2015/12/18/react-components-elements-and-instances.html)_.   
+**Note!**  
+_Big chunks of this page is taken from the React team´s _[_excellent blog_](https://facebook.github.io/react/blog/2015/12/18/react-components-elements-and-instances.html)_.  
 Go and check it out when you have a spare moment._
 
 
@@ -10,15 +10,19 @@ The difference between **components, their instances, and elements **confuses ma
 
 
 
-**In React a Element is:**
 
-> An element is a plain object describing a component instance or DOM node and its desired properties.
+
+In React \(when targeting the web\) a element is a plain object describing a component instance or DOM node and its desired properties.
 
 
 
 An element is not an actual instance. Rather, it is a way to tell React what you want to see on the screen. You can’t call any methods on the element. It’s just an immutable description object with two fields: type: \(string \| ReactClass\) and props: Object.
 
+####  {#thebutton}
 
+####  {#thebutton}
+
+####  {#thebutton}
 
 #### The Button {#thebutton}
 
@@ -49,13 +53,9 @@ This element is just a way to represent the following HTML as a plain object:
 </button>
 ```
 
-
-
 Note how elements can be nested. By convention, when we want to create an **element tree**, we specify one or more child elements as the`children`prop of their containing element.
 
 What’s important is that both child and parent elements are _just descriptions and not the actual instances_.
-
-
 
 ### Component Elements
 
@@ -74,8 +74,6 @@ However, the`type`of an element can also be a function or a class corresponding 
 This is the core idea of React.
 
 An element describing a component is also an element, just like an element describing the DOM node. They can be nested and mixed with each other.
-
-
 
 You can mix and match DOM and component elements in a single element tree:
 
@@ -103,7 +101,6 @@ You can mix and match DOM and component elements in a single element tree:
 }
 ```
 
-  
 Or, if you prefer JSX:
 
 ```
@@ -115,8 +112,6 @@ Or, if you prefer JSX:
   </div>
 )
 ```
-
-
 
 ### Components Encapsulate Element Trees
 
@@ -155,16 +150,11 @@ React will repeat this process until it knows the underlying DOM tag elements fo
 
 **The returned element tree can contain both elements describing DOM nodes, and elements describing other components. This lets you compose independent parts of UI without relying on their internal DOM structure.**
 
-
-
 ### Components Can Be Classes or Functions
 
 For a React component, props are the input, and an element tree is the output.
 
 In the code above Button are a React component. It can either be written as functions, like above, or as a class descending from React.Component. These three ways to declare a component are mostly equivalent:
-
-  
-
 
 ```
 // 1) As a function of props
@@ -220,23 +210,11 @@ class Button extends React.Component {
 }
 ```
 
-
-
 A functional component is less powerful but is simpler, and acts like a class component with just a single render\(\) method. Unless you need features available only in a class, we encourage you to use functional components instead.
-
-
 
 **However, whether functions or classes, fundamentally they are all components to React. They take the props as their input, and return the elements as their output.**
 
 **Mindset**: A react component is a idempotent function that returns a element or another component.
-
-
-
-
-
-
-
-
 
 ### Top-Down Reconciliation
 
@@ -253,9 +231,4 @@ ReactDOM.render({
 ```
 
 React will ask the Form component what element tree it returns, given those props. It will gradually “refine” its understanding of your component tree in terms of simpler primitives:
-
-
-
-  
-
 
