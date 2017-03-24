@@ -29,7 +29,7 @@ The first problem is that the DOM naturally comes with some state binding capabi
 
 So what do we do, how do we keep the model in sync with our view/DOM?
 
-#### 
+
 
 #### Data binding
 
@@ -39,13 +39,9 @@ Data binding is the ability to keep your model and view in sync automatically. U
 
 It achieves that by letting you declare the dependencies between the pieces of data in your app and changes in the state are propagated throughout your application and all depending pieces are "automagically" updated.
 
-
-
 #### Knockout
 
 Knockout argues for the [**MVVM**\(Model-View-ViewModel\)](http://knockoutjs.com/documentation/observables.html) approach and helps you implement the “View” parts
-
-[](codepen://Pesven/bqKELq?height=800&theme=0)
 
 
 
