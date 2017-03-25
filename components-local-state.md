@@ -47,9 +47,9 @@ export class StaticClock extends React.Component<IClockProps, IClockState>{
 }
 ```
 
-Now we are getting close to something that looks as a model. And yes, the state and props can be looked at as the model but there is no binding going on. Were only rendering what we see and we don't update "the model" here.
+Now we are getting close to something that looks as a model. And yes, the state and props can be looked at as the model but there is no binding going on. Were only rendering what we see and we don't update "the model" here, state and props are read only.
 
-Next we would like to update our state in a setInterval loop. The constructor is all about bootstrapping static content like state but for this we need to look at React´s lifecycle.
+Next we would like to **update** our state in a setInterval loop. We can update our state in the setState method but lets first look into when we should call setState.
 
 **Lifecycle hooks**
 
@@ -80,5 +80,60 @@ Death - Called before removed from the DOM.
 
 ##### ![](/assets/lifecycle.png)
 
- 
+### Change state
+
+One very important piece in the puzzle in to be able to update the state of the component this is done by calling the method `setState`.   
+  
+_Can you find the method definition, typescript interface, in the IDE?_
+
+```
+setState<K extends keyof S>(f: (prevState: S, props: P) => Pick<S, K>, callback?: () => any): void;
+setState<K extends keyof S>(state: Pick<S, K>, callback?: () => any): void;
+```
+
+Very easy if you can react fluent TypeScript definitions. Set state must return parts of the state or a mapping function that will be passed the precious state and props and must return the new partial state.   
+  
+Now we can update our clock and hopefully take advantage of some lifecycle events to wire things up properly.
+
+
+
+```
+ export class DynamicClock extends React.Component<IClockProps, IClockState>{
+    constructor(props) {
+        super(props);
+        //We set the default state in the contructor
+        this.state = {
+            time: new Date()
+        };
+    }
+
+    clockUpdater(){
+        
+    }
+
+    componentDidMount() {
+        setInterval(()=>this.setState({
+            time: new Date()
+        }), 1000);
+    }
+
+    render() {
+        return (
+            <div>
+                <h1>Hello, world!</h1>
+                <h2>It is {this.state.time.toLocaleTimeString()}.</h2>
+            </div>
+        );
+    }
+}
+
+```
+
+_Can you re-write this clock to also dispose of the interval when removed from the DOM?_
+
+Finally we can get some data flowing, but wait! Is this not data binding?   
+Isn't the state bound to the view?   
+No, so lets now look at how React is so fundamentaly different from the older libraries.
+
+
 
