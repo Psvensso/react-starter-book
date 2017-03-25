@@ -3,42 +3,30 @@
 When you call:
 
 ```
-ReactDOM.render({
-  key: 0,
-  type: Button,
-  props: {
-    isSubmitted: false,
-    buttonText: 'OK!'
-  }
-}, document.getElementById('root'));
+ReactDOM.render(<div><p>Hello world</p></div>, document.getElementById('root'));
 ```
 
-React will ask the Form component what element tree it returns, given those props. It will gradually “refine” its understanding of your component tree in terms of simpler primitives:
+React will ask the div component what element tree it returns, given those props. It will gradually “refine” its understanding of your component tree in terms of simpler primitives \(remember that we don´t show key and that $$ property for clarity reasons\):
 
 ```
 {
-  type: function Button(){
-    return {
-      type: 'button',
-      props: {
-        className: 'button button-blue',
-        children: {
-          type: 'b',
-          props: {
-            children: 'OK!'
-          }
+    type: 'div',
+    props: {
+        /**TL;DR; a lot of props*/
+        children: function div() {
+            return {
+                type: 'p',
+                props: {
+                    /**TL;DR; a lot of props*/
+                    children: 'Hello world'
+                }
+            }
         }
-      }
     }
-  },
-  props: {
-    children: 'OK!',
-    color: 'blue'
-  }
 }
 ```
 
-From this tree of components Reacts creates actual DOM nodes and a renderer like react-dom or react-native inserts them in the DOM at the given location \(second parameter of ReactDOM.render\). The tree is then stored for later reconciliations.
+From this tree of components/elements Reacts creates actual DOM nodes. And a renderer like react-dom or react-native inserts them in the DOM at the given location \(second parameter of ReactDOM.render\). The tree is then stored for later reconciliations.
 
 ##### 
 

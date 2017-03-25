@@ -10,6 +10,8 @@
 * [React library intro](react-basics.md)
 * [React Components](react-components.md)
 * [Component props](component-props.md)
+* [Components - Multiple children](components-multiple-children.md)
+* [Components - Local state](components-local-state.md)
 * [Reconciliation](reconciliation.md)
 * [Immutability](immutability.md)
 
