@@ -1,11 +1,6 @@
 # What is React
 
-React is a [open-source javascript](https://github.com/facebook/react) library developed and maintained by Facebook.  
-This quote is taken from the React documentation.
-
-> React is a declarative, efficient, and flexible JavaScript library for building user interfaces.
-
-
+React is a UI library developed at Facebook to facilitate the creation of interactive, stateful & reusable UI components. It is used at Facebook.com and Instagram.com is written entirely in React.
 
 But it's important to point out what the React library itself is not...
 
@@ -19,6 +14,4 @@ But it's important to point out what the React library itself is not...
 ---
 
 With React it's all about rendering state using components. Let's get to it.
-
-
 

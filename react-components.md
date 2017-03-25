@@ -212,7 +212,7 @@ const Button = React.createClass({
   }
 });
 
-// 3) As an ES6 class descending from React.Component
+// 3) As an ES6 class descending from React.Component and state
 class Button extends React.Component {
   render() {
     const { children, color } = this.props;
@@ -230,15 +230,56 @@ class Button extends React.Component {
     };
   }
 }
+
+
+
+//4) As a ES6 class descending from React.Component and with defined properties and state using TypeScript
+interface IPropInterface{
+  color: string;
+  children?: ReactNode
+}
+
+interface IState{ 
+
+}
+
+class Button extends React.Component<IPropInterface, IState> {
+  render() {
+    const { children, color } = this.props;
+    return {
+      type: 'button',
+      props: {
+        className: 'button button-' + color,
+        children: {
+          type: 'b',
+          props: {
+            children: children
+          }
+        }
+      }
+    };
+  }
+}
+
+
+
+
+
 ```
 
 A functional component is less powerful but is simpler, and acts like a class component with just a single render\(\) method. Unless you need features available only in a class, we encourage you to use functional components instead.
 
 **However, whether functions or classes, fundamentally they are all components to React. They take the props as their input, and return the elements as their output.**
 
-**Mindset**: A react component is a idempotent function that returns a element or another component.
+**Mindset**: A react component is an idempotent function that returns a element or another component.
 
-### 
+---
+
+Exercise time!
+
+---
+
+# 
 
 # Summary
 
@@ -253,12 +294,6 @@ An instance is what you refer to as this in the component class you write. It is
 Functional components don’t have instances at all. Class components have instances, but you never need to create a component instance directly—React takes care of this.
 
 **Finally, to create elements, use React.createElement\(\), JSX, or an element factory helper. Don’t write elements as plain objects in the real code—just know that they are plain objects under the hood.**
-
----
-
-Exercise time!
-
-Bring out your notebooks and branch
 
 ---
 
@@ -289,8 +324,4 @@ render({
 ```
 
 We will not use this syntax anymore in the chapters that follows. This is only to understand the underlying process. We will mainly use JSX.
-
----
-
-Now let's go and look at immutability and why it's so important to the React ecosystem.
 

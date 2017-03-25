@@ -9,6 +9,7 @@
 * [MV\*](basics-of-react.md)
 * [React library intro](react-basics.md)
 * [React Components](react-components.md)
+* [Component props](component-props.md)
 * [Reconciliation](reconciliation.md)
-* Immutability
+* [Immutability](immutability.md)
 
