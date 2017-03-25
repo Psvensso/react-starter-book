@@ -33,15 +33,11 @@ export const MyPureComponent = function(props:IProperties){
 }
 ```
 
-
-
 When we create a component class React will make sure that our properties are read only and will throw an error if you try to re assign them. Don't confuse this with immutability, we come to that later, for now just note down that you can't and should not change a property.
-
-
 
 ---
 
-Exercise 
+Exercise
 
 Remember that we said about if an element’s`type`is a string, it represents a DOM node with that tag name, and`props`correspond to its attributes. Let's look at some JSX and try to figure out what props we can pass down to them.
 
@@ -65,16 +61,8 @@ export class MyList extends React.Component<IMyListProps, void>{
     render(){
         return <div style={this.props}>How do i look?</div>;
     }
-} 
+}
 ```
 
-_Can you change this so that you can send in the text instead?_
-
-
-
-
-
-
-
-
+_Can you change this so that you can send in the text "_How do i look?_" as well?_
 
