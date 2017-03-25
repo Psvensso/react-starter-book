@@ -1,7 +1,7 @@
 # Components - Multiple children
 
-One common scenario is to return multiple children from a component. This would be the case for a list or a grid for example.   
-Let's look at some JSX trickery that uses javascripts buildt-in mapping features. 
+One common scenario is to return multiple children from a component. This would be the case for a list or a grid for example.  
+Let's look at some JSX trickery that uses javascripts buildt-in mapping features.
 
 ```
 interface ICustomer {
@@ -66,9 +66,5 @@ Let's write a component that filters.
 }
 ```
 
-How can we write this more pretty?  .... or is it already pretty damn pretty.
-
-
-
-
+How can we write this more pretty?  .... or is it already pretty.
 
