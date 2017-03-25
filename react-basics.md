@@ -13,5 +13,5 @@ But it's important to point out what the React library itself is not...
 
 ---
 
-With React it's all about rendering state using components. Let's get to it.
+With React it's all about rendering state using components. Let's go and see how the components are written.
 
