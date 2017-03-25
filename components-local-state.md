@@ -24,7 +24,7 @@ setInterval(tick, 1000);
 
 Next, let's look at how a component can "update" itself and handle som lifecycle hooks without creating an entire new tree.
 
-React component \(only components, not stateless functions\) can hold something we call state. Let's take out example from above and convert it into a component first. 
+React component \(only components, not stateless functions\) can hold something we call state. Let's take out example from above and convert it into a component first.
 
 ```
 export class StaticClock extends React.Component<IClockProps, IClockState>{
