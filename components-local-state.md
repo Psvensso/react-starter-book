@@ -80,5 +80,5 @@ Death - Called before removed from the DOM.
 
 ##### ![](/assets/lifecycle.png)
 
-
+ 
 
