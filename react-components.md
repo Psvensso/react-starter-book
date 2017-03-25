@@ -11,11 +11,14 @@ read the footnotes before testing out any code examples._
 
 ---
 
-The difference between **components, their instances, and elements **confuses many React beginners. Why are there three different terms to refer to something that is painted on screen? Let's break it down.
+The end result of rendering a React component is a element. In React you can write raw elements or more common write components that when they run returns elements or trees of elements.
+
+---
 
 In React a element is a plain object describing a component instance or DOM node and its desired properties.
 
-An element is not an actual instance. Rather, it is a way to tell React what you want to see on the screen. You can’t call any methods on the element.
+An element is not an actual instance. Rather, it is a way to tell React what you want to see on the screen.  
+You can’t call any methods on the element.
 
 ```
  //TypeScript interface of a ReactElement
@@ -38,7 +41,7 @@ An element is not an actual instance. Rather, it is a way to tell React what you
 
 ####  {#thebutton}
 
-#### The Button element {#thebutton}
+#### The Button element example {#thebutton}
 
 When an element’s`type`is a string, it represents a DOM node with that tag name, and`props`correspond to its attributes.  
 This is what a React component will render. For example:
@@ -179,92 +182,36 @@ For a React component, props are the input, and an element tree is the output.
 In the code above Button are a React component. It can either be written as functions, like above, or as a class descending from React.Component. These three ways to declare a component are mostly equivalent:
 
 ```
+interface IPropInterface {
+    color: string;
+    text: string
+}
+
+interface IState {
+
+}
+
+
 // 1) As a function of props
-const Button = ({ children, color }) => ({
-  type: 'button',
-  props: {
-    className: 'button button-' + color,
-    children: {
-      type: 'b',
-      props: {
-        children: children
-      }
-    }
-  }
-});
+const CancelButton = ({ color, text }:IPropInterface) => (
+    <button color={color}>{text}</button>
+);
 
 // 2) Using the React.createClass() factory
-const Button = React.createClass({
-  render() {
-    const { children, color } = this.props;
-    return {
-      type: 'button',
-      props: {
-        className: 'button button-' + color,
-        children: {
-          type: 'b',
-          props: {
-            children: children
-          }
-        }
-      }
-    };
-  }
+const OkButton = React.createClass<IPropInterface, IState>({
+    render() {
+        const { color, text } = this.props;
+        return <button color={color}>{text}</button>;
+    }
 });
 
 // 3) As an ES6 class descending from React.Component and state
-class Button extends React.Component {
-  render() {
-    const { children, color } = this.props;
-    return {
-      type: 'button',
-      props: {
-        className: 'button button-' + color,
-        children: {
-          type: 'b',
-          props: {
-            children: children
-          }
-        }
-      }
-    };
-  }
+class SubmitButton extends React.Component<IPropInterface, IState> {
+    render() {
+        const { color, text } = this.props;
+        return <button color={color}>{text}</button>;
+    }
 }
-
-
-
-//4) As a ES6 class descending from React.Component and with defined properties and state using TypeScript
-interface IPropInterface{
-  color: string;
-  children?: ReactNode
-}
-
-interface IState{ 
-
-}
-
-class Button extends React.Component<IPropInterface, IState> {
-  render() {
-    const { children, color } = this.props;
-    return {
-      type: 'button',
-      props: {
-        className: 'button button-' + color,
-        children: {
-          type: 'b',
-          props: {
-            children: children
-          }
-        }
-      }
-    };
-  }
-}
-
-
-
-
-
 ```
 
 A functional component is less powerful but is simpler, and acts like a class component with just a single render\(\) method. Unless you need features available only in a class, we encourage you to use functional components instead.
@@ -272,6 +219,8 @@ A functional component is less powerful but is simpler, and acts like a class co
 **However, whether functions or classes, fundamentally they are all components to React. They take the props as their input, and return the elements as their output.**
 
 **Mindset**: A react component is an idempotent function that returns a element or another component.
+
+![](/assets/propertiesToElement.png)
 
 ---
 
@@ -304,18 +253,18 @@ It is omitted in the examples above. The examples above uses inline objects for 
 
 Also the TypeScript interface does not include the `$$typeof` property so we must cast the object type to any.
 
-Runnable example:
+Runnable example of rendering an raw json element:
 
 ```js
 import * as React from "react";
 import { render } from "react-dom";
-const el = React.createElement("", );
+
 render({
     "$$typeof": Symbol.for('react.element'),
     key: null,
     type: 'div',
     props: {
-        className:"main container-fluid",
+        className: "main container-fluid",
         children: "Hello world!"
     }
 } as any,
@@ -323,5 +272,5 @@ render({
 );
 ```
 
-We will not use this syntax anymore in the chapters that follows. This is only to understand the underlying process. We will mainly use JSX.
+
 
