@@ -82,8 +82,8 @@ Death - Called before removed from the DOM.
 
 ### Change state
 
-One very important piece in the puzzle in to be able to update the state of the component this is done by calling the method `setState`.   
-  
+One very important piece in the puzzle in to be able to update the state of the component this is done by calling the method `setState`.
+
 _Can you find the method definition, typescript interface, in the IDE?_
 
 ```
@@ -91,11 +91,9 @@ setState<K extends keyof S>(f: (prevState: S, props: P) => Pick<S, K>, callback?
 setState<K extends keyof S>(state: Pick<S, K>, callback?: () => any): void;
 ```
 
-Very easy if you can react fluent TypeScript definitions. Set state must return parts of the state or a mapping function that will be passed the precious state and props and must return the new partial state.   
-  
+Very easy if you can react fluent TypeScript definitions. Set state must return parts of the state or a mapping function that will be passed the precious state and props and must return the new partial state.
+
 Now we can update our clock and hopefully take advantage of some lifecycle events to wire things up properly.
-
-
 
 ```
  export class DynamicClock extends React.Component<IClockProps, IClockState>{
@@ -108,7 +106,7 @@ Now we can update our clock and hopefully take advantage of some lifecycle event
     }
 
     clockUpdater(){
-        
+
     }
 
     componentDidMount() {
@@ -126,14 +124,9 @@ Now we can update our clock and hopefully take advantage of some lifecycle event
         );
     }
 }
-
 ```
 
 _Can you re-write this clock to also dispose of the interval when removed from the DOM?_
-
-Finally we can get some data flowing, but wait! Is this not data binding?   
-Isn't the state bound to the view?   
-No, so lets now look at how React is so fundamentaly different from the older libraries.
 
 
 

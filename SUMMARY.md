@@ -12,6 +12,8 @@
 * [Component props](component-props.md)
 * [Components - Multiple children](components-multiple-children.md)
 * [Components - Local state](components-local-state.md)
+* [DOM Event handling](dom-event-handling.md)
+* [Forms](forms.md)
 * [Reconciliation](reconciliation.md)
 * [Immutability](immutability.md)
 
