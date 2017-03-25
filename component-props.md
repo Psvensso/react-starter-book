@@ -64,5 +64,5 @@ export class MyList extends React.Component<IMyListProps, void>{
 }
 ```
 
-_Can you change this so that you can send in the text "_How do i look?_" as well?_
+_Can you change this so that you can send in the text "How do i look?_" as well?
 
