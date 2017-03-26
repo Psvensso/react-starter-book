@@ -40,8 +40,6 @@ When React does its "tree diff" and calls every tree node to compare you can hoo
 
 [More from the documentation](https://facebook.github.io/react/docs/optimizing-performance.html#shouldcomponentupdate-in-action)
 
-Buzzz: React is currently working on version 2 of this "compare/diff" algorithm, they call the new React core Fiber. The team has promised that the API should be very close to the same as it is today with a smooth upgrade path. If any breaking changes at all.  
-True nerds should look at the super cool talk about [Fiber from React Conf 2017 by Lin Clark](https://youtu.be/S8HXkEnA48g?list=WL&t=6702). 
-
- 
+**Buzzz: **React is currently working on version 2 of this "compare/diff" algorithm, they call the new React core Fiber. The team has promised that the API should be very close to the same as it is today with a smooth upgrade path. If any breaking changes at all.  
+True nerds should look at the super cool talk about [Fiber from React Conf 2017 by Lin Clark](https://youtu.be/S8HXkEnA48g?list=WL&t=6702).
 
