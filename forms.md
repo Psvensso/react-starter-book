@@ -16,16 +16,8 @@ Uncontrolled input:
 <input type="text" name="name" />
 ```
 
-
-
-
-
 _Test it out, can you enter data into the input?  
 Can you place a input next to a ticking clock \(earlier example\) and still update the input even though React is re-rendering at intervals?_
-
-
-
-
 
 ##### Controller components
 
@@ -35,13 +27,9 @@ All you need to create a controlled component is to add the value property. This
 
 ```
 <input type="text" value={this.state.email} onChange={event=>this.setState({email: event.target.value})} />
-
 ```
 
-Look at the examples comparing the two forms @ [005-Forms](https://github.com/Psvensso/react-starter/blob/example-components/Scripts/Examples/Components/005-Forms.tsx)  
-
-
-
+Look at the examples comparing the two forms @ [005-Forms](https://github.com/Psvensso/react-starter/blob/example-components/Scripts/Examples/Components/005-Forms.tsx)
 
 
 
