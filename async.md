@@ -6,9 +6,9 @@ React does not know about the concept of data fetching. The React library helps 
 
 When doing async actions with React you want to make sure that the component that triggered the change are still there in the DOM take care of the promise \(or whatever your async callback pattern may be\). Therefore it's a good practise to handle async actions as high up in the component tree as possible. Somewhere "stable" that does not change, or a better option to make async actions even based.
 
-##### Inline data fetching
+##### Inline data fetching 
 
-Although not a good idea this method is still in use. The basic indea is that you use setState in your async callback. Again, this is not a recommended practise but way work in simple scenarios. 
+Although not a good idea this method is still in use. The basic indea is that you use setState in your async callback. Again, this is not a recommended practise but way work in simple scenarios.
 
 ###### PlayAlong@[006-Async](https://github.com/Psvensso/react-starter/blob/example-components/Scripts/Examples/Components/006-async.tsx)
 
@@ -74,5 +74,5 @@ Although not a good idea this method is still in use. The basic indea is that yo
         document.getElementById("asyncex") 
     );
 
-The other, much more robust way is with a state management API. We will use the well adopted [Redux ](https://github.com/reactjs/redux)library. 
+The other, much more robust way is with a state management API. We will use the well adopted [Redux ](https://github.com/reactjs/redux)library.
 
