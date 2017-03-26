@@ -17,4 +17,5 @@
 * [Reconciliation](reconciliation.md)
 * [Immutability](immutability.md)
 * [Loading external data](async.md)
+* [Flux](flux.md)
 
